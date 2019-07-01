@@ -1,0 +1,124 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render active toggle 1`] = `
+<div
+  id="toggle-bar"
+>
+  <p
+    className="left-items"
+  >
+    1
+     items left
+  </p>
+  <div
+    className="toggle-group"
+  >
+    <button
+      className="all-items"
+      onClick={[Function]}
+    >
+      All
+    </button>
+    <button
+      className="active-items active"
+      onClick={[Function]}
+    >
+      Active
+    </button>
+    <button
+      className="completed-items"
+      onClick={[Function]}
+    >
+      Completed
+    </button>
+  </div>
+  <button
+    className="clear-completed"
+    onClick={[Function]}
+  >
+    Clear completed
+  </button>
+</div>
+`;
+
+exports[`render all toggle 1`] = `
+<div
+  id="toggle-bar"
+>
+  <p
+    className="left-items"
+  >
+    1
+     items left
+  </p>
+  <div
+    className="toggle-group"
+  >
+    <button
+      className="all-items active"
+      onClick={[Function]}
+    >
+      All
+    </button>
+    <button
+      className="active-items"
+      onClick={[Function]}
+    >
+      Active
+    </button>
+    <button
+      className="completed-items"
+      onClick={[Function]}
+    >
+      Completed
+    </button>
+  </div>
+  <button
+    className="clear-completed"
+    onClick={[Function]}
+  >
+    Clear completed
+  </button>
+</div>
+`;
+
+exports[`render completed toggle 1`] = `
+<div
+  id="toggle-bar"
+>
+  <p
+    className="left-items"
+  >
+    1
+     items left
+  </p>
+  <div
+    className="toggle-group"
+  >
+    <button
+      className="all-items"
+      onClick={[Function]}
+    >
+      All
+    </button>
+    <button
+      className="active-items"
+      onClick={[Function]}
+    >
+      Active
+    </button>
+    <button
+      className="completed-items active"
+      onClick={[Function]}
+    >
+      Completed
+    </button>
+  </div>
+  <button
+    className="clear-completed"
+    onClick={[Function]}
+  >
+    Clear completed
+  </button>
+</div>
+`;

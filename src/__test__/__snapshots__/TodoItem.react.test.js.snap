@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render active item 1`] = `
+<li
+  className="todo-item"
+>
+  <button
+    className="finish-btn"
+    onClick={[Function]}
+  />
+  <div
+    className="item-text"
+    onDoubleClick={[Function]}
+  >
+    active item
+  </div>
+  <button
+    className="delete-btn"
+    onClick={[Function]}
+  >
+    ✕
+  </button>
+</li>
+`;
+
+exports[`render completed item 1`] = `
+<li
+  className="todo-item"
+>
+  <button
+    className="finish-btn finished-btn"
+    onClick={[Function]}
+  />
+  <div
+    className="item-text finished-text"
+    onDoubleClick={[Function]}
+  >
+    completed item
+  </div>
+  <button
+    className="delete-btn"
+    onClick={[Function]}
+  >
+    ✕
+  </button>
+</li>
+`;

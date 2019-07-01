@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render test 1`] = `
+<div
+  id="input-bar"
+>
+  <div
+    className="select-all-btn"
+    onClick={[Function]}
+  />
+  <input
+    className="input-box"
+    onChange={[Function]}
+    onKeyPress={[Function]}
+    placeholder="What needs to be done?"
+    type="text"
+    value=""
+  />
+</div>
+`;
