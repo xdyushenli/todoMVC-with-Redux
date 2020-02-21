@@ -1,0 +1,47 @@
+#filters {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 15px;
+    border: 1px lightgray solid;
+    border-top: 0;
+    background: #fff;
+    color: gray;
+}
+
+#filters .count {
+    line-height: 27px;
+    user-select: none;
+}
+
+#filters .filter-btns {
+    display: flex;
+}
+
+#filters .filter {
+    border: 0;
+    padding: 5px 10px;
+    margin-left: 5px;
+    color: gray;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    user-select: none;
+    cursor: pointer;
+}
+
+#filters a:hover {
+    border-color: rgba(175, 47, 47, 0.1);
+}
+
+#filters a.selected {
+    border-color: rgba(175, 47, 47, 0.2);
+}
+
+#filters .clear-btn {
+    user-select: none;
+    cursor: pointer;
+    line-height: 29px;
+}
+
+#filters .clear-btn:hover {
+    text-decoration: underline;
+}

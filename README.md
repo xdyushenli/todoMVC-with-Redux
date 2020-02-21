@@ -1,68 +1,33 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# 踩坑记录
+* 神奇的 css 属性: appearance: none; 该属性可以消除浏览器的默认样式, 常常在自定义 button、radio、checkbox 时使用。
 
-## Available Scripts
+* 在切换元素显示状态的时候, 可以通过切换上层元素的类名来改变下层元素的样式。前提是要使用父子选择器:
+```css
+.parent .son {
+    /* 一些样式 */
+}
 
-In the project directory, you can run:
+/* 修改上层元素类名后 */
+.parent2 .son {
+    /* 不同的样式 */
+}
+```
+下层元素类名不变, 但样式改变了。
 
-### `npm start`
+* 使用 redux 的一个小技巧, 在编写容器组件时, 常常需要定义 mapDispatchToProps, 内部这些事件处理函数在执行的时候, 常常需要获取到函数执行时所在的组件的 props。
+这时, 可以使用如下方式将函数执行时的 this 指向 props 对象:
+```js
+// 定义事件处理函数
+function mapDispatchToProps (dispatch, ownProps) {
+    return {
+        toggleTodo: function (e) {
+            // ...
+        },
+    }
+}
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+// 绑定事件
+<li onClick={(e) => this.props.toggleTodo(e)}>
+```
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+* 使用 switch 语句的时候, 中间要加上 break, 不然会一直执行后面的代码。

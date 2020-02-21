@@ -1,0 +1,90 @@
+.list-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 50px;
+    padding-left: 7px;
+    padding-right: 15px;
+    line-height: 50px;
+    font-size: 25px;
+    border: 1px lightgray solid;
+    border-top: 0;
+    background: #fff;
+    list-style: none;
+    word-break: break-all;
+}
+
+.list-item .checkbox {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid lightgray;
+    flex-shrink: 0;
+    cursor: pointer;
+    text-align: center;
+    line-height: 36px;
+    user-select: none;
+    transition: 500ms all;
+}
+
+.list-item .completed-checkbox {
+    border-color: rgb(195, 219, 195);
+    color: rgb(195, 219, 195);
+}
+
+.list-item .item-text {
+    flex-grow: 1;
+    margin: 0 10px;
+    color: #4d4d4d;
+    font-size: 28px;
+    transition: 500ms all;
+    user-select: none;
+}
+
+.list-item .completed-text {
+    color: #d9d9d9;
+    text-decoration: line-through;
+}
+
+.list-item .edit-input {
+    display: none;
+}
+
+.list-item .delete {
+    color: #cc9a9a;
+    font-size: 35px;
+    user-select: none;
+}
+
+.list-item .delete:hover {
+    color: #af5b5e;
+}
+
+/* 编辑状态下的样式 */
+.editing .item-text {
+    display: none;
+}
+
+.editing .edit-input {
+    display: block;
+    outline: none;
+    flex-grow: 1;
+    height: 50px;
+    margin: 0 0 0 42px;
+    border: 1px solid #999;
+    padding-left: 10px;
+    color: #4d4d4d;
+    line-height: 50px;
+    box-shadow: 0 -1px 5px 0 rgba(0, 0, 0, 0.2);
+    font-size: 25px;
+}
+
+.editing .checkbox {
+    display: none;
+}
+
+.editing .delete {
+    display: none;
+}

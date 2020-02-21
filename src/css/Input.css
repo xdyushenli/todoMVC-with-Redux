@@ -1,0 +1,48 @@
+#input {
+    position: relative;
+}
+
+#input input {
+    box-sizing: border-box;
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    height: 50px;
+    padding-left: 50px;
+    line-height: 50px;
+    font-size: 25px;
+    border: 1px lightgray solid;
+}
+
+#input input:focus {
+    outline: 0;
+}
+
+#input input::placeholder {
+    color: lightgray;
+    font-size: 25px;
+    line-height: 40px;
+    font-style: italic;
+    user-select: none;
+}
+
+#input .select-all {
+    position: absolute;
+    display: flex;
+    width: 50px;
+    height: 50px;
+    justify-content: center;
+    align-content: center;
+    z-index: 1;
+    color: lightgray;
+    transform: rotate(90deg);
+}
+
+#input .select-all::before {
+    content: '❯';
+    font-size: 35px;
+}
+
+#input .select-all:hover {
+    color: gray;
+}
